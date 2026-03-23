@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Créateur numérique polyvalent : du développement web à la direction artistique, en passant par le son. Projet Jeux Video par Victor Gaillot : Godot, Design, Photoshop, JavaScript, Sound Design, Premiere Pro" />
+  <meta name="keywords"
+    content="Victor Gaillot, Godot, Design, Photoshop, JavaScript, Sound Design, Premiere Pro, projet personnel" />
+  <title>Victor Gaillot – Jeu Video</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../img/favicon.png">
+</head>
+
+<body>
+  <!-- En-tête -->
+  <header>
+    <nav>
+      <a href="../index.html" class="logo"><img src="../img/logo.svg" alt="Victor Gaillot"></a>
+      <a href="../projets.html" class="pill-button-index">Projets</a>
+      <a href="../galerie.html" class="pill-button-index">Galerie</a>
+      <a href="../apropos.html" class="pill-button-index">À propos</a>
+    </nav>
+  </header>
+
+  <!-- Contenu principal -->
+  <main class="project-page">
+    <section class="project-hero">
+      <div class="project-video">
+        <video src="../vid/jeu.mp4" autoplay muted loop playsinline></video>
+      </div>
+      <div class="project-header">
+        <h1>Jeu Video</h1>
+        <p class="project-domains">Godot, Design, Photoshop, JavaScript, Sound Design, Premiere Pro</p>
+      </div>
+      <div class="scroll-indicator">
+        <span>↓</span>
+      </div>
+    </section>
+    <section class="project-content">
+      <div class="project-description">
+        <h2 class="project-section-title">Jeu Vidéo : Contemplation / Plateforme 2D</h2>
+        <p class="project-tagline">Projet personnel | Réalisé en 2 mois</p>
+        <p>Le jeu vidéo est un moyen puissant pour transmettre des émotions et raconter une histoire.
+          Avec le jeu ELENA, j'ai voulu créer une expérience interactive sur mesure :
+          un jeu vidéo conçu spécialement pour ma copine, pensé comme un cadeau unique qui mêle un univers
+          visuel et messages personnels.</p>
+
+        <p>Le principal défi résidait dans la direction artistique et l'immersion.
+          Je voulais créer une atmosphère agréable et contemplative.
+          J'ai donc construit un univers sonore et visuel cohérent,
+          capable de lui donner vie sans rompre la fluidité du gameplay.</p>
+
+        <p>C’est un projet complet où j’ai endossé plusieurs casquettes et piloté toute la chaîne de production :
+          le développement et l'intégration sur le moteur Godot (incluant de la logique de script en JavaScript), la
+          conception visuelle et le dessin des assets sur Photoshop,
+          le Sound Design pour l'ambiance audio,
+          ainsi que l'utilisation de Premiere Pro pour le montage d'une video explicative de la création du projet.</p>
+
+        <p>Ce travail m’a permis de consolider toutes mes compétences, de la création graphique brute
+          au développement technique. Il m'a surtout appris à gérer un timeline de création de jeu vidéo de bout en
+          bout, en liant sensibilité
+          artistique et algorithmique pour livrer un produit fini et fonctionnel.</p>
+      </div>
+      <h2 class="project-section-title">La vidéo complète</h2>
+      <div class="project-vimeo">
+        <iframe src="https://files.catbox.moe/opdaaw.mp4" frameborder="0" allow="fullscreen; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="project-gallery">
+        <img src="../img/projets/4.png" alt="Jeu Video">
+        <img src="../img/projets/5.png" alt="Jeu Video">
+        <img src="../img/projets/9.png" alt="Jeu Video">
+        <img src="../img/projets/6.png" alt="Jeu Video">
+        <img src="../img/projets/7.png" alt="Jeu Video">
+        <img src="../img/projets/8.png" alt="Jeu Video">
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer>
+    <footer>
+      <a href="index.html">victor gaillot</a>
+      <a href="mailto:vic.gaillot@gmail.com" target="_blank">VIC.GAILLOT@GMAIL.COM</a>
+      <a href="https://www.linkedin.com/in/victor-gaillot-889662288/" target="_blank">LINKEDIN</a>
+      <a href="../CV_Victor_Gaillot.pdf" target="_blank">CV</a>
+    </footer>
+    <script>
+      // Effet parallax pour la page projet
+      const projectVideo = document.querySelector('.project-video');
+      const projectHeader = document.querySelector('.project-header');
+      const scrollArrow = document.querySelector('.scroll-indicator');
+
+      if (projectVideo && projectHeader) {
+        window.addEventListener('scroll', function () {
+          const scrolled = window.pageYOffset;
+          const videoHeight = projectVideo.offsetHeight;
+
+          // Effet parallax sur la vidéo (se déplace plus lentement)
+          if (scrolled < videoHeight) {
+            const parallaxSpeed = 0.5;
+            projectVideo.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+
+            // Faire défiler le header plus rapidement (effet parallax inverse)
+            projectHeader.style.transform = `translateY(${scrolled * 0.3}px)`;
+
+            // Opacité du header qui diminue au scroll
+            const opacity = 1 - (scrolled / videoHeight);
+            projectHeader.style.opacity = Math.max(0, opacity);
+            if (scrollArrow) {
+              scrollArrow.style.opacity = Math.max(0, opacity);
+            }
+          }
+        }, { passive: true });
+      }
+    </script>
+</body>
+
+</html>
