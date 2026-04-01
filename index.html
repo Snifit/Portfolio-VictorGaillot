@@ -19,9 +19,10 @@
 <body class="index-page">
   <div class="hero-section">
     <canvas id="logo-liquid"></canvas>
-    <video id="front-logo" autoplay loop muted playsinline>
-    <source src="vid/snifit.webm" type="video/webm">
-</video>
+    <video id="front-logo-video" class="desktop-logo" autoplay loop muted playsinline>
+      <source src="vid/snifit.webm" type="video/webm">
+    </video>
+    <img id="front-logo-img" class="mobile-logo" src="vid/snifit.gif" alt="Victor Gaillot Logo Animé">
 
     <header>
       <nav>
@@ -144,9 +145,9 @@
   <div id="project-modal" class="modal-overlay">
     <div class="modal-container">
       <button class="modal-close-btn pill-button outline">Fermer</button>
-      
+
       <div id="modal-dynamic-content" class="modal-content">
-        </div>
+      </div>
     </div>
   </div>
 </body>
