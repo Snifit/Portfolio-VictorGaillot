@@ -234,8 +234,8 @@ body.index-page footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 35vh;
-    max-width: 350px;
+    width: 150vh;
+    max-width: 1300px;
     z-index: 5;
     pointer-events: none;
     filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.9));
@@ -431,18 +431,18 @@ body.index-page footer {
    ===================================================== */
 
 .modal-overlay {
-    display: none; 
+    display: none;
     position: fixed;
-    inset: 0; 
-    background-color: rgba(36, 26, 51, 0.9); 
-    z-index: 9999; 
-    overflow-y: auto; 
+    inset: 0;
+    background-color: rgba(36, 26, 51, 0.9);
+    z-index: 9999;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    
+
     /* On prépare l'apparition en fondu */
     opacity: 0;
     transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: auto !important; 
+    pointer-events: auto !important;
 }
 
 /* Quand la modale est active */
@@ -453,20 +453,21 @@ body.index-page footer {
 
 .modal-container {
     position: relative;
-    background-color: var(--white-color); 
-    width: 98%; 
-    max-width: 1400px; 
-    min-height: 80vh; 
-    margin: 80px auto; 
-    border-radius: 20px; 
-    padding: 80px 50px 60px 50px; 
+    background-color: var(--white-color);
+    width: 98%;
+    max-width: 1400px;
+    min-height: 80vh;
+    margin: 80px auto;
+    border-radius: 20px;
+    padding: 80px 50px 60px 50px;
     box-sizing: border-box;
-    
+
     /* EFFET DE TRANSITION : 
        Le contenu part de plus bas (100px) et est un peu transparent */
     opacity: 0;
     transform: translateY(100px) scale(0.98);
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); /* Effet "smooth" haut de gamme */
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* Effet "smooth" haut de gamme */
 }
 
 /* Animation déclenchée quand l'overlay a la classe .open */
@@ -476,15 +477,15 @@ body.index-page footer {
 }
 
 .modal-close-btn {
-    position: absolute; 
+    position: absolute;
     top: 25px;
     right: 25px;
     z-index: 10000;
     background-color: var(--black-color);
-    pointer-events: auto !important; 
+    pointer-events: auto !important;
     /* Apparition un peu décalée du bouton fermer */
     opacity: 0;
-    transition: opacity 0.3s ease 0.4s; 
+    transition: opacity 0.3s ease 0.4s;
 }
 
 .modal-overlay.open .modal-close-btn {
@@ -496,7 +497,8 @@ body.index-page footer {
    ===================================================== */
 
 .modal-content {
-    color: var(--black-color); /* Texte foncé sur fond clair */
+    color: var(--black-color);
+    /* Texte foncé sur fond clair */
 }
 
 /* Titre principal (Syne) */
@@ -521,7 +523,8 @@ body.index-page footer {
 }
 
 .modal-project-description h2 {
-    font-size: 1.5rem; margin-top: 0;
+    font-size: 1.5rem;
+    margin-top: 0;
 }
 
 /* Vidéo principale (Vimeo/Iframe) */
@@ -532,11 +535,13 @@ body.index-page footer {
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .modal-video-wrapper iframe {
-    width: 100%; height: 100%; border: none;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* Galerie d'images (Grille 3 colonnes) */
@@ -558,8 +563,13 @@ body.index-page footer {
    ========================= */
 
 @media (max-width: 1024px) {
-    .silhouette-v { width: 350px; }
-    .gallery { grid-template-columns: repeat(3, 1fr); }
+    .silhouette-v {
+        width: 350px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* =========================
@@ -567,7 +577,10 @@ body.index-page footer {
    ========================= */
 
 @media (max-width: 768px) {
-    .gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
 
     /* Désactiver les curseurs personnalisés sur mobile */
     html,
@@ -615,7 +628,7 @@ body.index-page footer {
     }
 
     p {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     /* Footer mobile */
@@ -654,14 +667,15 @@ body.index-page footer {
     .pill-button span {
         font-size: 16px;
     }
-    
+
     .modal-container {
-        width: 100%; 
-        margin: 60px auto 0 auto; 
-        border-radius: 20px 20px 0 0; 
+        width: 100%;
+        margin: 60px auto 0 auto;
+        border-radius: 20px 20px 0 0;
         /* On s'assure que le texte commence bien en dessous du bouton sur téléphone */
-        padding: 70px 20px 40px 20px; 
+        padding: 70px 20px 40px 20px;
     }
+
     .modal-close-btn {
         top: 15px;
     }

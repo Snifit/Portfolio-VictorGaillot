@@ -10,7 +10,7 @@ const projectsData = {
             <p>Le jeu vidéo est un moyen puissant pour transmettre des émotions et raconter une histoire.
             Avec le jeu ELENA, j'ai voulu créer une expérience interactive sur mesure :
             un jeu vidéo conçu spécialement pour ma copine, pensé comme un cadeau unique qui mêle un univers
-            visuel et messages personnels.</p>
+            visuel et des messages personnels.</p>
 
             <p>Le principal défi résidait dans la direction artistique et l'immersion.
             Je voulais créer une atmosphère agréable et contemplative.
