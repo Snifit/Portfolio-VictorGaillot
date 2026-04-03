@@ -412,7 +412,6 @@ body.index-page footer {
     margin-left: -50px;
     /* Un petit espace de sécurité standard */
 
-    /* --- LA MAGIE EST ICI --- */
 
     /* 1. On donne l'URL de l'image PNG (avec transparence) pour définir la forme */
     shape-outside: url('img/Victor/Victor_transparent.png');
@@ -642,8 +641,25 @@ body.index-page footer {
         font-size: 32px;
     }
 
+    .projects-intro p {
+        font-size: 17px;
+    }
+
+    .gallery-description {
+        font-size: 17px;
+    }
+
+    .about-section {
+        margin-left: -20px;
+    }
+
+    .about-content {
+        margin-left: -30px;
+        padding-right: -40px;
+    }
+
     .about-content p {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     p {
